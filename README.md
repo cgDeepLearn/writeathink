@@ -8,7 +8,7 @@
 * Django: 1.10.x, 1.11.X
 * Postgresql
 
-### 示例博客：<http://www.spiderpy.cn/blog>
+### 示例博客：<http://www.writeathink.cn/blog>
 
 ### 特点
 
