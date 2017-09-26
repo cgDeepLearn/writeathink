@@ -39,6 +39,18 @@ python manage.py runserver
 
 浏览器中打开<http://127.0.0.1:8000/>即可访问
 
-## 历史版本
+## 历史版本变动
 
-* [黑白简约版](https://github.com/cgDeepLearn/django-blog/tree/v1.0)
+* start    ---2017-3-25
+* add model view url    ---2017-4-3
+* add category, tag  ---2017-4-10
+* add html css ---2017-4-17
+* add js  ---2017-5-3
+* add comment, sitemap  ---2017-5-15
+* add blogtags  ---2017-5-20
+* add widget  ---2017-6-2
+* add host and depoly  ---2017-8-20
+* fix index  ---2017-8-22
+* need to be done(archive,rank,url-slug, recommend)
+
+
