@@ -1,13 +1,13 @@
 ## Django搭建博客
 ![py27](https://camo.githubusercontent.com/392a32588691a8418368a51ff33a12d41f11f0a9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f707974686f6e2d322e372d6666363962342e737667) 
-  [![](https://img.shields.io/badge/Django-1.10-green.svg)](http://www.spiderpy.cn/blog/)
-[![](https://img.shields.io/badge/Powered%20by-@j_hao104-blue.svg)](http://www.spiderpy.cn/blog/)
+  [![](https://img.shields.io/badge/Django-1.11-green.svg)](http://www.writeathink.cn/blog/)
+[![](https://img.shields.io/badge/Powered%20by-@cgDeepLearn-blue.svg)](http://www.writeathink.cn/blog/)
 
 使用Django快速搭建博客
 ### 要求
-* Python: 2.X
-* Django: 1.10.x
-* Mysql
+* Python: 3.X
+* Django: 1.10.x, 1.11.X
+* Postgresql
 
 ### 示例博客：<http://www.spiderpy.cn/blog>
 
@@ -23,9 +23,9 @@
 
 ### 下载
 ```
-wget https://github.com/jhao104/django-blog/archive/master.zip
+wget https://github.com/cgDeepLearn/django-blog/archive/master.zip
 or
-git clone git@github.com:jhao104/django-blog.git
+git clone git@github.com:cgDeepLearn/django-blog.git
 ```
 
 ### 安装
@@ -42,4 +42,4 @@ python manage.py runserver
 
 ## 历史版本
 
-* [黑白简约版](https://github.com/jhao104/django-blog/tree/v1.0)
+* [黑白简约版](https://github.com/cgDeepLearn/django-blog/tree/v1.0)
