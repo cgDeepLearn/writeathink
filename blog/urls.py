@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 -------------------------------------------------
-   File Name：     urls.py  
-   Description :  
-   Author :       JHao
+   File Name：     urls.py 
+   Description : blog urls
+   Author :       cgDeepLearn
    date：          2017/4/13
 -------------------------------------------------
    Change Activity:
-                   2017/4/13: 
+                   2017/4/13:
 -------------------------------------------------
 """
-__author__ = 'JHao'
+
 
 from blog import views
 from django.conf.urls import url
