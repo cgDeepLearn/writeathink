@@ -20,8 +20,10 @@
 sftp-config.json
 
 # Basics
+# Byte-compiled / optimized / DLL files
+__pycache__/
 *.py[cod]
-__pycache__
+*$py.class
 
 # Logs
 logs
