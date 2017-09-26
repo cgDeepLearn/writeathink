@@ -11,10 +11,14 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import configparser
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# config settings
+CONFIG = configparser.ConfigParser()
+CONFIG.read(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -25,7 +29,7 @@ SECRET_KEY = '85bus3!*+_3t1ks)&&o(u-liuhucshja!-44a1squ93=#+v+4r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.writeathink.cn']
 
 # HOST = "http://www.spiderpy.cn"
 
@@ -79,13 +83,13 @@ WSGI_APPLICATION = 'django_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_blog',
-        'USER': 'root',
-        'PASSWORD': 'cg12345',
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': CONFIG.get('postgresql', 'db_name'),
+        'USER': CONFIG.get('postgresql', 'user'),
+        'PASSWORD': CONFIG.get('postgresql', 'pass'),
+        'HOST': CONFIG.get('postgresql', 'host'),
+        'PORT': CONFIG.get('postgresql', 'port'),
+    },
 }
 
 

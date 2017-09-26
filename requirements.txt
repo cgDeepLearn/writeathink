@@ -1,3 +1,4 @@
-Django==1.10.2
-Markdown==2.5.2
-Pygments==2.0.1
+Django==1.11.2
+Markdown==2.6.8
+Pygments==2.2.0
+psycopg2==2.7.3
