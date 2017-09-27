@@ -72,8 +72,9 @@
         <form action="{% url 'haystack_search' %}" method="get">
             {% csrf_token %}
             <div class="search-index">
-                <input type="search" name="q" placeholder="搜索" required>
-                <input type="submit" value="Search">
+                <input type="search" name="key" placeholder="搜索" onfocus="this.placeholder=''"
+                               onblur="this.placeholder='请输入关键字'"/>
+                <i class="el-search"><input type="submit" value="Search"></i>
                 <!--
                         <input name="key" type="search" placeholder="请输入关键字" onfocus="this.placeholder=''"
                                onblur="this.placeholder='请输入关键字'"/>

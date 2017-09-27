@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 
 {% block title %}
-    <title>搜索:  - Write and Think</title>
+    <title>搜索: {{ query }} - Write and Think</title>
 {% endblock %}
 
 {% load custom_filter %}
@@ -12,7 +12,7 @@
         <h4 class="index-title">
             <a href="{% url "blog:article" cate='all' %}"><i class="el-search"></i> 搜索到<b class="lable">{{ query }}</b>相关结果</a>
             <span class="orange-text">{{ category }}</span>
-            <span style="float:right;margin-right:10px;">共:<a class="orange-text"> {{ count }} </a>条</span>
+            <span style="float:right;margin-right:10px;">共:<a class="orange-text"> {{ page.object_list|length}} </a>条</span>
         </h4>
         <div class="arclist">
             <!--列表开始-->
@@ -26,7 +26,7 @@
                     </div>
                     <div class="arc-right">
                         <h4 class="blue-text"><a href="{% url "blog:detail" pk=article.object.pk %}" title="{{ article.object.title }}">{{ article.object.title }}</a></h4>
-                        <p>{{ article.digest }}</p>
+                        <p>{{ article.object.digest }}</p>
                         <ul>
                             <li><a title="{{ article.object.author }} {{ article.object.date_time }} 发表 "><i class="el-time"></i> {{ article.object.date_time }}</a></li>
                             <li><a href="#" title="作者： {{ article.object.author }}"><i class="el-user"></i>{{ article.object.author }}</a></li>
@@ -50,7 +50,7 @@
         <div class="pagination">
             <div class="list-page">
                 <ul class="post-data">
-                    <li><a>第 {{ current_page }} - {{ last_page }} 页</a> <a>共 {{ count }} 条</a></li>
+                    <li><a>第 {{ current_page }} - {{ last_page }} 页</a> <a>共 {{ page.paginator.num_pages }} 页</a></li>
                 </ul>
             </div>
             <ul>
