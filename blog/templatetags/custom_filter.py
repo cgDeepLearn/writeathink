@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 """
 -------------------------------------------------
-   File Name：     custom_filter.py  
-   Description :  
-   Author :       JHao
+   File Name：     custom_filter.py
+   Description : 
+   Author :       cgDeepLearn
    date：          2017/4/14
 -------------------------------------------------
    Change Activity:
-                   2017/4/14: 
+                   2017/4/14:
 -------------------------------------------------
 """
-__author__ = 'JHao'
+
 
 import re
 import markdown
@@ -42,9 +42,11 @@ def custom_markdown(value):
     code_list = re.findall(r'<pre><code class="(.*)">', content, re.M)
     for code in code_list:
         content = re.sub(r'<pre><code class="(.*)">',
-                         '<pre class="line-numbers"><code class="language-{code}">'.format(code=code.lower()), content,
+                         '<pre class="line-numbers"><code class="language-{code}">'.format(
+                             code=code.lower()), content,
                          1)
-    content = re.sub(r'<pre>\s?<code>', '<pre class="line-numbers"><code class="language-python">', content)
+    content = re.sub(
+        r'<pre>\s?<code>', '<pre class="line-numbers"><code class="language-python">', content)
     return content
 
 

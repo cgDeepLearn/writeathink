@@ -24,13 +24,13 @@
             <ul class="orange-text">
                 <li class=""><a href="{% url "blog:index" %}">首页</a></li>
                 <li><a href="{% url "blog:about" %}">关于</a></li>
-                <li><a href="{% url "blog:article" pk=0 %}">博客</a></li>
+                <li><a href="{% url "blog:article" cate='all' %}">博客</a></li>
                 <li class='drop'>
                     <a href="JavaScript:;">分类<i class='el-chevron-down'></i></a>
                     <div class="drop-nav orange-text ">
                         <ul>
                             {% for category in category_list %}
-                                <li><a href="{% url "blog:article" pk=category.pk %}">{{ category.name }}</a></li>
+                                <li><a href="{% url "blog:article" cate=category.name %}">{{ category.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -45,11 +45,17 @@
         <div class="mob-menu">
             <!--手机顶部搜索-->
             <div class="search ">
-                <form action="{% url "blog:search" %}" method="get">
+                <form action="{% url 'haystack_search' %}" method="get">
+                    {% csrf_token %}
                     <div class="search-index">
-                        <input name="name" type="text" placeholder="请输入关键字" onfocus="this.placeholder=''"
+                        <input type="search" name="q" placeholder="搜索" required>
+                        <input type="submit" value="Search">
+                        <!--
+                        <input name="key" type="search" placeholder="请输入关键字" onfocus="this.placeholder=''"
                                onblur="this.placeholder='请输入关键字'"/>
                         <i class="el-search"><input value=" " type="submit"/></i>
+                    -->
+
                     </div>
                 </form>
             </div>
@@ -57,12 +63,12 @@
             <ul>
                 <li><a href="{% url "blog:index" %}">首页</a></li>
                 <li><a href="{% url "blog:about" %}">关于</a></li>
-                <li><a href="{% url "blog:article" pk=0 %}">博客</a></li>
+                <li><a href="{% url "blog:article" cate='all' %}">博客</a></li>
                 <li class='mob-drop'>
                     <a href="javascrip:;">分类</a>
                     <ul class="mob-dropmenu">
                         {% for category in category_list %}
-                            <li><a href="{% url "blog:article" pk=category.pk %}">{{ category.name }}</a></li>
+                            <li><a href="{% url "blog:article" cate=category.name %}">{{ category.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </li>

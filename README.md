@@ -51,6 +51,7 @@ python manage.py runserver
 * add widget  ---2017-6-2
 * add host and depoly  ---2017-8-20
 * fix index  ---2017-8-22
-* need to be done(archive,rank,url-slug, recommend)
+* need to be done(archive,search with whooshidnex, rank,url-slug, recommend)
+* need to be done(search box position, right html change with block(specially in detail) )
 
 

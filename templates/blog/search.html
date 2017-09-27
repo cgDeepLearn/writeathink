@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 
 {% block title %}
-    <title>搜索:{{ key }} - Write and Think</title>
+    <title>搜索: {{ key }} - Write and Think</title>
 {% endblock %}
 
 {% load custom_filter %}
@@ -9,7 +9,7 @@
     {% paginate article_list 8 %}
     <section class="mysection">
         <h4 class="index-title">
-            <a href="{% url "blog:article" pk=0 %}"><i class="el-search"></i> 搜索到<b class="lable">{{ key }}</b>相关结果</a>
+            <a href="{% url "blog:article" cate='all' %}"><i class="el-search"></i> 搜索到<b class="lable">{{ key }}</b>相关结果</a>
             <span class="orange-text">{{ category }}</span>
             <span style="float:right;margin-right:10px;">共:<a class="orange-text"> {{ count }} </a>条</span>
         </h4>

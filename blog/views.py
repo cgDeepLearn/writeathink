@@ -20,18 +20,20 @@ def Index(request):
                                                "source_id": "index"})
 
 
-def Articles(request, pk):
+def Articles(request, cate):
     """
     博客列表页面
     :param request:
     :param pk:
+    cate: cate_name
     :return:
     """
-    pk = int(pk)
-    if pk:
-        category_object = get_object_or_404(Category, pk=pk)
+    # pk = int(pk)
+    # if pk:
+    if cate != "all":
+        category_object = get_object_or_404(Category, name=cate)
         category = category_object.name
-        article_list = Article.objects.filter(category_id=pk)
+        article_list = Article.objects.filter(category=category_object)
     else:
         # pk为0时表示全部
         article_list = Article.objects.all()  # 获取全部文章

@@ -29,6 +29,7 @@ SECRET_KEY = '85bus3!*+_3t1ks)&&o(u-liuhucshja!-44a1squ93=#+v+4r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+HOST = '127.0.0.1:8000/'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.writeathink.cn']
 
 # HOST = "http://www.spiderpy.cn"
@@ -42,8 +43,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'haystack',
     'blog'
 ]
+
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'blog.whoosh_cn_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    },
+}
+
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

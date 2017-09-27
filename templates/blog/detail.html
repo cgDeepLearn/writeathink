@@ -81,7 +81,7 @@
                 <!--标签-->
                 <div class="article_tag">
                     <ul>
-                        <li><a href="{% url "blog:article" pk=article.category_id %}"
+                        <li><a href="{% url "blog:article" cate=article.category%}"
                                title="归类：{{ article.category }}">{{ article.category }}</a></li>
                         {% for tag in article.tag.all %}
                             <li><a href="{% url "blog:tag" name=tag.tag_name %}" title="标签：{{ tag.tag_name }} ">{{ tag.tag_name }}</a>&nbsp;</li>

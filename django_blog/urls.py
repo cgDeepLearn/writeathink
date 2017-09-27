@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^blog/$', views.Index, name='index'),
     url(r'^$', views.Index),
+    url(r'^search/', include('haystack.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
