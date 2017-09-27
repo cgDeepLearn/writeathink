@@ -56,8 +56,19 @@
             <ul>
 
                 <li {% if current_page == 1 %}class="active"{% endif %}><a href="?q={{ query }}&amp;page=1">首页</a></li>
+                
+            
+                {% if page.has_previous %}
+                    <li><a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">上一页</a></li>
+                {% endif %}
+                |
+                {% if page.has_next %}
+                    <li><a href="?q={{ query }}&amp;page={{ page.next_page_number }}">下一页</a></li>
+                {% endif %}
+                <!--上一页下一页
                 <li {% if current_page >= 2 %} {% else %}class="active"{% endif %}><a href="?q={{ query }}&amp;page={{ current_page|add:-1 }}">上一页</a></li>
                 <li {% if current_page < last_page %} {% else %}class="active"{% endif %}><a href="?q={{ query }}&amp;page={{ current_page|add:1 }}">下一页</a></li>
+                -->
                 <li {% if current_page == last_page %}class="active"{% endif %}><a href="?q={{ query }}&amp;page={{ last_page }}">尾页</a></li>
             </ul>
         </div>
