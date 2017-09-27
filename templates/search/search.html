@@ -10,7 +10,7 @@
     {% paginate page.object_list 8 %}
     <section class="mysection">
         <h4 class="index-title">
-            <a href="{% url "blog:article" cate='all' %}"><i class="el-search"></i> 搜索到<b class="lable">{{ key }}</b>相关结果</a>
+            <a href="{% url "blog:article" cate='all' %}"><i class="el-search"></i> 搜索到<b class="lable">{{ query }}</b>相关结果</a>
             <span class="orange-text">{{ category }}</span>
             <span style="float:right;margin-right:10px;">共:<a class="orange-text"> {{ count }} </a>条</span>
         </h4>
@@ -37,7 +37,7 @@
                                 <i class="el-tag"></i>
                                 <a href="#">{{ article.object.tag.values| getTag }}</a>&nbsp;
                             </li>
-                            <li><a href="{% url "blog:article" cate=article.object.category_name %}" title="查看分类"><i class="el-th-list"></i>{{ article.object.category }}</a></li>
+                            <li><a href="{% url "blog:article" cate=article.object.category.name %}" title="查看分类"><i class="el-th-list"></i>{{ article.object.category }}</a></li>
                         </ul>
                     </div>
                 </li>
