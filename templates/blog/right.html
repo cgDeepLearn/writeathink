@@ -1,3 +1,5 @@
+{% load blog_tags %}
+
 <aside class="myaside">
     <!--搜索-->
     <div class="search animation-div">
@@ -26,7 +28,7 @@
             <div><a class="benbo" href="https://github.com/cgDeepLearn/writeathink" target="_blank"><i
                     class="el-download-alt"></i></a><span>博客源码</span></div>
             <div><a class="taobao"
-                    href="https://my.oschina.net/jhao104/blog"
+                    href="http://code.writeathink.cn/blog/"
                     target="_blank"><i class="el-blogger"></i></a><span>博客地址</span></div>
             <div><a class="side-fx"><i class="el-share-alt"></i></a><span>分享本博</span></div>
             <div><a class="mail-btn" href="javascript:;"><i class="el-envelope"></i></a><span>订阅我</span></div>
@@ -87,11 +89,12 @@
 
 
     <!--文章排行tab-->
+
     <div class="mytab bg-color animation-div">
         <div class="tab-btn"><a class="hd-btn tab-active" href="javascript:;"><i class="el-comment-alt"></i>最新评论</a><a
                 class="ph-btn" href="javascript:;"><i class="el-signal"></i>文章排行</a></div>
         <ul class="hudong-ul">
-            <!--=======查询相册=============-->
+            
             {% for comment in comment_list %}
                 <li>
                     <div class="sd-name">
@@ -102,7 +105,6 @@
                 </li>
             {% endfor %}
 
-
         </ul>
         <!--文章排行-->
         <ul class="paihang-ul">
@@ -111,6 +113,35 @@
                                     title="{{ article.title }}">{{ article.title }}<b><i
                         class="el-eye-open"></i>({{ article.view }})</b></a></li>
             {% endfor %}
+        </ul>
+
+    </div>
+
+
+        <!--文章排行tab-->
+    <div class="mytab bg-color animation-div">
+        <div class="tab-btn"><a class="hd-btn tab-active" href="javascript:;"><i class="el-comment-alt"></i>按月归档</a></div>
+
+        {%  all_posts as allposts %}
+        {% regroup allposts by date_time.year as year_post_group %}
+        <ul class="paihang-ul">
+
+            {% for year in year_post_group %}
+            <li>{{ year.grouper }} 年
+                {% regroup year.list by date_time.month as month_post_group %}
+                <ul>
+                    {% for month in month_post_group %}
+                    
+                    <li>
+                        <a href="#">
+                        {{ month.grouper }} 月({{ month.list | length }})
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+
         </ul>
 
     </div>

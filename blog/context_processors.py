@@ -3,14 +3,14 @@
 -------------------------------------------------
    File Name：     context_processors.py  
    Description :  
-   Author :       JHao
+   Author :       cgDeepLearn
    date：          2017/4/14
 -------------------------------------------------
    Change Activity:
                    2017/4/14: 
 -------------------------------------------------
 """
-__author__ = 'JHao'
+__author__ = 'cgDeepLearn'
 
 from blog.models import Category, Article, Tag, Comment
 

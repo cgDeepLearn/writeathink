@@ -73,8 +73,7 @@ ROOT_URLCONF = 'django_blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +81,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'blog.context_processors.sidebar'
+                'blog.context_processors.sidebar'  # in blog/context_processors.py
             ],
         },
     },
@@ -146,11 +145,20 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-'''
+
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    ('css', os.path.join(STATIC_ROOT, 'css').replace('\\', '/')),
+    ('js', os.path.join(STATIC_ROOT, 'js').replace('\\', '/')),
+    ('images', os.path.join(STATIC_ROOT, 'images').replace('\\', '/')),
+    ('upload', os.path.join(STATIC_ROOT, 'upload').replace('\\', '/')),
+    ('404', os.path.join(STATIC_ROOT, '404').replace('\\', '/')),
+    ('archives', os.path.join(STATIC_ROOT, 'archives').replace('\\', '/')),
+    ('cur', os.path.join(STATIC_ROOT, 'cur').replace('\\', '/')),
+    ('font', os.path.join(STATIC_ROOT, 'font').replace('\\', '/')),
+    ('photos', os.path.join(STATIC_ROOT, 'photos').replace('\\', '/')),
+    ('prism', os.path.join(STATIC_ROOT, 'prism').replace('\\', '/')),
+    # os.path.join(BASE_DIR, 'static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
-'''
