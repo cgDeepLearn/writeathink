@@ -79,7 +79,8 @@ def GetComment(request):
     comments = data.get('comments')[0]
     content = comments.get('content')
     user = comments.get('user').get('nickname')
-    Comment(title=title, source_id=source_id, user_name=user, url=url, comment=content).save()
+    Comment(title=title, source_id=source_id,
+            user_name=user, url=url, comment=content).save()
     return JsonResponse({"status": "ok"})
 
 
@@ -94,6 +95,17 @@ def detail(request, pk):
     article.viewed()
     return render(request, 'blog/detail.html', {"article": article,
                                                 "source_id": article.id})
+
+
+def archive_month(request, year, month):
+    """
+    按月归档
+    """
+    article_list = Article.objects.filter(date_time__year=year,
+                                          date_time__month=month).order_by('-date_time')
+    return render(request,
+                  'blog/archive_month.html',
+                  context={'article_list': article_list})
 
 
 def search(request):

@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^detail/(?P<pk>\d+)$', views.detail, name='detail'),
     url(r'^search/$', views.search, name='search'),   
     url(r'^tag/(?P<name>.*?)/$', views.tag, name='tag'),
+    url(r'archive/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2})/$', views.archive_month, name='archive_month'),
 
 ]
