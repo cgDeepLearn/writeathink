@@ -52,7 +52,7 @@
                                 class="el-time"></i> {{ article.date_time }}</a></li>
                         <li><a href="#" title="作者： {{ article.author }}"><i
                                 class="el-user"></i>{{ article.author }}</a></li>
-                        <li><a href="#" title="已有 {{ article.comment }} 条评论"><i
+                        <li><a href="{% url 'blog:detail' pk=article.id %}#Coon" title="已有 {{ article.comment }} 条评论"><i
                                 class="el-comment"> {{ article.comment }}</i></a>
                         </li>
                         <li><a title="已有 {{ article.view }} 次浏览"><i class="el-eye-open"></i>{{ article.view }}
@@ -85,7 +85,7 @@
                                 class="el-time"></i> {{ article.date_time }}</a></li>
                         <li><a href="#" title="作者： {{ article.author }}"><i
                                 class="el-user"></i>{{ article.author }}</a></li>
-                        <li><a href="#" title="已有 {{ article.comment }} 条评论"><i
+                        <li><a href="{% url 'blog:detail' pk=article.id %}#Coon" title="已有 {{ article.comment }} 条评论"><i
                                 class="el-comment"> {{ article.comment }}</i></a>
                         </li>
                         <li><a title="已有 {{ article.view }} 次浏览"><i class="el-eye-open"></i>{{ article.view }}

@@ -9,7 +9,7 @@
     {% paginate article_list 8 %}
     <section class="mysection">
         <h4 class="index-title">
-            <a href="{% url "blog:article" pk=0 %}"><i class="el-tag"></i> 标签<b class="lable">{{ tag }}</b></a>
+            <a href="{% url 'blog:tag' name=tag %}"><i class="el-tag"></i> 标签<b class="lable">{{ tag }}</b></a>
             <span class="orange-text">{{ category }}</span>
             <span style="float:right;margin-right:10px;">共有:<a class="orange-text"> {{ count }} </a>篇</span>
         </h4>
@@ -29,14 +29,14 @@
                         <ul>
                             <li><a title="{{ article.author }} {{ article.date_time }} 发表 "><i class="el-time"></i> {{ article.date_time }}</a></li>
                             <li><a href="#" title="作者： {{ article.author }}"><i class="el-user"></i>{{ article.author }}</a></li>
-                            <li><a href="#" title="已有 {{ article.comment }} 条评论"><i class="el-comment"></i>{{ article.comment }}</a>
+                            <li><a href="{% url 'blog:detail' pk=article.id %}#Coon" title="已有 {{ article.comment }} 条评论"><i class="el-comment"></i>{{ article.comment }}</a>
                             </li>
                             <li><a title="已有 {{ article.view }} 次浏览"><i class="el-eye-open"></i>{{ article.view }}</a></li>
                             <li class="mob-hidden">
                                 <i class="el-tag"></i>
                                 <a href="#">{{ article.tag.values| getTag }}</a>&nbsp;
                             </li>
-                            <li><a href="{% url "blog:article" pk=article.category_id %}" title="查看分类"><i class="el-th-list"></i>{{ article.category }}</a></li>
+                            <li><a href="{% url 'blog:article' cate=article.category %}" title="查看分类"><i class="el-th-list"></i>{{ article.category }}</a></li>
                         </ul>
                     </div>
                 </li>

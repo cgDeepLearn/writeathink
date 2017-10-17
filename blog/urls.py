@@ -15,6 +15,7 @@
 from blog import views
 from django.conf.urls import url
 
+app_name = 'blog'
 urlpatterns = [
     url(r'^index/$', views.Index, name='index'),
     url(r'^about/$', views.About, name='about'),
@@ -25,8 +26,7 @@ urlpatterns = [
     url(r'^get_comment/$', views.GetComment, name='get_comment'),
     url(r'^detail/(?P<pk>\d+)/$', views.detail, name='detail'),
     url(r'^detail/(?P<pk>\d+)$', views.detail, name='detail'),
-    url(r'^search/$', views.search, name='search'),
-    
+    url(r'^search/$', views.search, name='search'),   
     url(r'^tag/(?P<name>.*?)/$', views.tag, name='tag'),
 
 ]

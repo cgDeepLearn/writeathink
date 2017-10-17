@@ -52,7 +52,8 @@ python manage.py runserver
 * add host and depoly  ---2017-8-20
 * fix index  ---2017-8-22
 * fix search with whoosh, haystack ---2017-9-10
-* need to be done(archive, rank, url-slug, recommend, article picture change, comment jump)
+* add archive, comment jump ---2017-10-17
+* need to be done(rank, url-slug, recommend, article picture change)
 * need to be done( right html change with block(specially in detail), body with richtexteditor)
 * need to be done(homepage with top list, redis, celery)
 * need to be done(add recommend button)
