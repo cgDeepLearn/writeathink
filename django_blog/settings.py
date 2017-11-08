@@ -30,7 +30,7 @@ SECRET_KEY = '85bus3!*+_3t1ks)&&o(u-liuhucshja!-44a1squ93=#+v+4r'
 DEBUG = True
 
 HOST = '127.0.0.1:8000/'
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.writeathink.cn']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.writeathink.cn', '47.52.108.216']
 
 # HOST = "http://www.spiderpy.cn"
 
