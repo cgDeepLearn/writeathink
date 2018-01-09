@@ -35,10 +35,9 @@ def get_tags():
     return Tag.objects.annotate(
         num_posts=Count('article')).filter(num_posts__gt=0)
 
-"""
-@register.inclusion_tag('blog/post/latest_posts.html')
+
+@register.inclusion_tag('blog/latest_posts.html')
 def show_latest_posts(count=5):
     '''最新文章的渲染模板'''
-    latest_posts = Post.published.order_by('-publish')[:count]
+    latest_posts = Article.objects.order_by('-date_time')[:count]
     return {'latest_posts': latest_posts}
-"""

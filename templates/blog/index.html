@@ -57,7 +57,7 @@
                         </li>
                         <li><a title="已有 {{ article.view }} 次浏览"><i class="el-eye-open"></i>{{ article.view }}
                         </a></li>
-                        <li><a href="#" title="查看分类"><i class="el-th-list"></i>{{ article.category }}</a></li>
+                        <li><a href="{% url 'blog:category' cate=article.category.name %}" title="查看分类"><i class="el-th-list"></i>{{ article.category }}</a></li>
                     </ul>
                 </div>
             </li>
@@ -90,7 +90,7 @@
                         </li>
                         <li><a title="已有 {{ article.view }} 次浏览"><i class="el-eye-open"></i>{{ article.view }}
                         </a></li>
-                        <li><a href="#" title="查看分类"><i class="el-th-list"></i>{{ article.category }}</a></li>
+                        <li><a href="{% url 'blog:category' cate=article.category.name %}" title="查看分类"><i class="el-th-list"></i>{{ article.category }}</a></li>
                     </ul>
                 </div>
             </li>

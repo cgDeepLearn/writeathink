@@ -308,6 +308,20 @@ header .mynav{width:60%;float:right;height:100%;position:relative;}
 .paihang-ul li:nth-of-type(6) span:before{content:'6';background:#857479;color:#fff;}
 .paihang-ul li a{font-size:13px;color:#777;}
 .paihang-ul li a b{color:#999;font-weight:normal;font-size:12px;    position: absolute;right: 0px;}
+
+.zuixin-ul{width:90%;margin:auto;margin-top:10px;display:none;}
+.zuixin-ul li{width:100%;padding:15px 0;border-bottom:1px dashed #ccc;overflow:hidden;    position: relative;}
+.zuixin-ul li:last-child{border:none;}
+.zuixin-ul li span:before{display:inline-block;width:20px;height:23px;border-radius:5px;-webkit-border-radius:5px;text-align:center;font-size:12px;margin-right:10px;}
+.zuixin-ul li:nth-of-type(1) span:before{content:'1';background:#e71555;color:#fff;}
+.zuixin-ul li:nth-of-type(2) span:before{content:'2';background:#16d083;color:#fff;}
+.zuixin-ul li:nth-of-type(3) span:before{content:'3';background:#ff6700;color:#fff;}
+.zuixin-ul li:nth-of-type(4) span:before{content:'4';background:#857479;color:#fff;}
+.zuixin-ul li:nth-of-type(5) span:before{content:'5';background:#857479;color:#fff;}
+.zuixin-ul li:nth-of-type(6) span:before{content:'6';background:#857479;color:#fff;}
+.zuixin-ul li a{font-size:13px;color:#777;}
+.zuixin-ul li a b{color:#999;font-weight:normal;font-size:12px;    position: absolute;right: 0px;}
+
 .mytab ul li a{transition:all 0.5s;-webkit-transition:all 0.5s;}
 .mytab ul li a:hover{text-shadow:0 0px 3px #000;color:#fff;}
 
