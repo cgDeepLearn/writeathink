@@ -43,8 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_celery_results',
     'haystack',
-    'blog'
+    'blog',
+    'tools'
 ]
 
 HAYSTACK_CONNECTIONS = {
@@ -162,3 +164,13 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+
+
+# celery settings
+# 使用redis作为中间人
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+# 任务的结果存储在redis
+CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+
+
+
