@@ -168,9 +168,9 @@ STATICFILES_DIRS = (
 
 # celery settings
 # 使用redis作为中间人
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379/0'
+CELERY_BROKER_URL = 'redis://:{}@127.0.0.1:6379/0'.format(CONFIG.get(redis, pass)
 # 任务的结果存储在redis
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379/0'
+CELERY_RESULT_BACKEND = 'redis://:{}@127.0.0.1:6379/0'.format(CONFIG.get(redis, pass))
 
 
 
