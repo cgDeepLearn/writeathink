@@ -27,7 +27,7 @@ CONFIG.read(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = '85bus3!*+_3t1ks)&&o(u-liuhucshja!-44a1squ93=#+v+4r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 HOST = '127.0.0.1:8000/'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.writeathink.cn']
