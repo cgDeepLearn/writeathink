@@ -41,22 +41,26 @@ python manage.py runserver
 
 ## 历史版本变动
 
-* start    ---2017-3-25
-* add model view url    ---2017-4-3
-* add category, tag  ---2017-4-10
-* add html css ---2017-4-17
-* add js  ---2017-5-3
-* add comment, sitemap  ---2017-5-15
-* add blogtags  ---2017-5-20
-* add widget  ---2017-6-2
-* add host and depoly  ---2017-8-20
-* fix index  ---2017-8-22
-* fix search with whoosh, haystack ---2017-9-10
-* add archive, comment jump ---2017-10-17
-* add https  ---2018-3-5
-* need to be done(rank, url-slug, recommend, article picture change)
-* need to be done( right html change with block(specially in detail), body with richtexteditor)
-* need to be done(homepage with top list, redis, celery)
-* need to be done(add recommend button)
-* need to be done(use cookiecutter)
+* change log
+  * start    ---2017-3-25
+  * add model view url    ---2017-4-3
+  * add category, tag  ---2017-4-10
+  * add html css ---2017-4-17
+  * add js  ---2017-5-3
+  * add comment, sitemap  ---2017-5-15
+  * add blogtags  ---2017-5-20
+  * add widget  ---2017-6-2
+  * add host and depoly  ---2017-8-20
+  * fix index  ---2017-8-22
+  * fix search with whoosh, haystack ---2017-9-10
+  * add archive, comment jump ---2017-10-17
+  * add celery-redis  ---2018
+  * add https  ---2018-3-5
+
+* need to be done
+  * (rank, url-slug, recommend, article picture change)
+  * ( right html change with block(specially in detail), body with richtexteditor)
+  * (homepage with top list, redis, celery)
+  * (add recommend button)
+  * (use cookiecutter)
 
