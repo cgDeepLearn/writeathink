@@ -93,8 +93,8 @@
 <!--文章排行tab-->
 <div class="mytab bg-color animation-div">
     <div class="tab-btn"><a class="hd-btn" href="javascript:;"><i class="el-comment-alt"></i>最新评论</a><a
-            class="ph-btn" href="javascript:;"><i class="el-signal"></i>文章排行</a><a
-            class="zx-btn tab-active" href="javascript:;"><i class="el-inbox"></i>按月归档</a>
+            class="ph-btn tab-active" href="javascript:;"><i class="el-signal"></i>文章排行</a><a
+            class="zx-btn" href="javascript:;"><i class="el-inbox"></i>按月归档</a>
         </div>
 
 
@@ -126,6 +126,23 @@
     <ul class="zuixin-ul">
         {%  all_posts as allposts %}
         {% regroup allposts by date_time.year as year_post_group %}
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" 
+                           href="#collapseOne">
+                            点击我进行展开，再次点击我进行折叠。第 1 部分
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        Hello!
+                    </div>
+                </div>
+            </div>
+        </div>
             {% for year in year_post_group %}
             <li><i class="el-calendar"></i> {{ year.grouper }} 年
                 {% regroup year.list by date_time.month as month_post_group %}
