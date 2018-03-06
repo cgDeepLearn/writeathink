@@ -24,7 +24,6 @@
         <nav class="mynav">
             <ul class="orange-text">
                 <li class=""><a href="{% url "blog:index" %}">首页</a></li>
-                <li><a href="{% url "blog:about" %}">关于</a></li>
                 <li><a href="{% url "blog:article" cate='all' %}">博客</a></li>
                 <li class='drop'>
                     <a href="JavaScript:;">分类<i class='el-chevron-down'></i></a>
@@ -38,6 +37,7 @@
                 </li>
                 <li><a href="{% url "blog:archive" %}">归档</a></li>
                 <li><a href="{% url "blog:link" %}">链接</a></li>
+                <li><a href="{% url "blog:about" %}">关于</a></li>
                 <li><a href="{% url "blog:message" %}">留言</a></li>
             </ul>
         </nav>

@@ -1,11 +1,13 @@
 ## Django搭建博客
-  [![](https://img.shields.io/badge/Django-1.11-green.svg)](http://www.writeathink.cn/blog/)
+  [![](https://img.shields.io/badge/Django-1.10-green.svg)](http://www.writeathink.cn/blog/)
 [![](https://img.shields.io/badge/Powered%20by-@cgDeepLearn-blue.svg)](http://www.writeathink.cn/blog/)
 
 使用Django快速搭建博客
+
 ### 要求
+
 * Python: 3.X
-* Django: 1.10.x, 1.11.X
+* Django: 1.10.x +
 * Postgresql
 
 ### 示例博客：<http://www.writeathink.cn/blog>
@@ -21,6 +23,7 @@
 * 友情链接
 
 ### 下载
+
 ```
 wget https://github.com/cgDeepLearn/django-blog/archive/master.zip
 or
