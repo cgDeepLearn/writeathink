@@ -94,7 +94,7 @@
         <div class="tab-btn"><a 
             class="ph-btn" href="javascript:;"><i class="el-signal"></i>文章排行</a><a
             class="hd-btn tab-active" href="javascript:;"><i class="el-comment-alt"></i>按月归档</a><a 
-            class="zx-btn" href="javascript:;"><i class="el-signal"></i>待添加</a>
+            class="ph-btn" href="javascript:;"><i class="el-signal"></i>待添加</a>
         </div>
 
         <!--文章排行-->
@@ -127,7 +127,7 @@
             {% endfor %}
         </ul>
 
-        <!--最新 3个及以上得用tab-nav来做-->
+        <!--最新 3个及以上得用selected来做-->
         <ul class="zuixin-ul">
             {% for article in latest_posts %}
             <li><span></span><a href="{% url "blog:detail" pk=article.id %}"

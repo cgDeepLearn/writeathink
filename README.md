@@ -28,11 +28,27 @@ git clone git@github.com:cgDeepLearn/django-blog.git
 ```
 
 ### 安装
-```
+
+```shell
 pip install -r requirements.txt  #安装所有依赖
 setting.py配置自己的数据库
+```
+
+# 保密起见创建.env文件配置数据库
+
+```conf
+[postgresql]
+db_name = ***
+user = ***
+pass = ***
+port = 5432
+[redis]
+pass =
+```
+
+```
 配置畅言：到http://changyan.kuaizhan.com/注册站点,将templates/message.html中js部分换成你在畅言中生成的js。
-python manage.py makemigrations blog
+python manage.py makemigrations 
 python manage.py migrate
 python manage.py runserver
 ```
