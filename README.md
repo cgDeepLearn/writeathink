@@ -53,6 +53,7 @@ python manage.py runserver
 * fix index  ---2017-8-22
 * fix search with whoosh, haystack ---2017-9-10
 * add archive, comment jump ---2017-10-17
+* add https  ---2018-3-5
 * need to be done(rank, url-slug, recommend, article picture change)
 * need to be done( right html change with block(specially in detail), body with richtexteditor)
 * need to be done(homepage with top list, redis, celery)
