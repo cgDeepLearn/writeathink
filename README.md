@@ -75,6 +75,7 @@ python manage.py runserver
   * add archive, comment jump ---2017-10-17
   * add celery-redis  ---2018
   * add https  ---2018-3-5
+  * change archive-by-month style  ---2018-3-6
 
 * need to be done
   * (rank, url-slug, recommend, article picture change)
@@ -82,4 +83,4 @@ python manage.py runserver
   * (homepage with top list, redis, celery)
   * (add recommend button)
   * (use cookiecutter)
-
+  * ~~change archive-by-month style~~
