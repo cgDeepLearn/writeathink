@@ -10,7 +10,11 @@
 * Django: 1.10.x +
 * Postgresql
 
-### 示例博客：~~http://www.writeathink.cn/blog~~ （域名已过期）
+### 示例博客：
+
+- ~~http://www.writeathink.cn/blog~~ （域名已过期）
+- https://cgdeeplearn.github.io (看看新的静态博客吧~)
+
 
 ### 特点
 
