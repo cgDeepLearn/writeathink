@@ -67,7 +67,7 @@ olefile==0.44
 openpyxl==2.4.9
 pickleshare==0.7.4
 pilkit==2.0
-Pillow==4.2.1
+Pillow==9.3.0
 poyo==0.4.1
 prompt-toolkit==1.0.15
 psycopg2==2.7.3
